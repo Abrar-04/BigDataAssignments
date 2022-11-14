@@ -24,13 +24,19 @@ sol.
 
 pros:
 Open Source
+
 Easy
+
 Plenty of Libraries
+
 Can be used for WebDev,Iot,ML,DL etc..
+
 
 cons:
 slow compared to other languages
+
 high memory consumption
+
 complex multithreading
 
 --------------------------------------------------------------------------------------------
@@ -40,10 +46,15 @@ sol.
 
 Python Can be used for
 software development
+
 web development
+
 GUI development
+
 Testing
+
 Machine Learning ,Deep Learning, Data Science
+
 IOT, embedded systmes
 
 --------------------------------------------------------------------------------------------
