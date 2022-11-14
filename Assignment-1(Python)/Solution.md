@@ -1,18 +1,21 @@
 PythonAssignment-1
 Name: Syed Abrar
 email: smabrar04@gmail.com
+
 -------------------------------------------------------------------------------------------
 
 Q1. Why do we call Python as a general purpose and high-level programming language?
 sol.
 
 Python is a general purpose and high level language as It is written in human readbale format and as it can be used in developing software solutions for multiple different problems irrespective of the system configuration, operating system etc.. 
+
 --------------------------------------------------------------------------------------------
 
 Q2. Why is Python called a dynamically typed language?
 sol.
 
 In python the type of varibale is determined at the time of runtime hence python is a dunamically typed language 
+
 --------------------------------------------------------------------------------------------
 
 
@@ -29,6 +32,7 @@ cons:
 slow compared to other languages
 high memory consumption
 complex multithreading
+
 --------------------------------------------------------------------------------------------
 
 Q4. In what all domains can we use Python?
@@ -41,6 +45,7 @@ GUI development
 Testing
 Machine Learning ,Deep Learning, Data Science
 IOT, embedded systmes
+
 --------------------------------------------------------------------------------------------
 
 Q4. In what all domains can we use Python?
@@ -48,6 +53,7 @@ sol.
 
 Python Can be used for
 software development,web development,GUI development,Testing,Machine Learning ,Deep Learning, Data Science,IOT, embedded systme
+
 --------------------------------------------------------------------------------------------
 
 Q5. What are variable and how can we declare them?
@@ -59,6 +65,7 @@ a=1
 b='hello'
 c=2.0
 d=True
+
 --------------------------------------------------------------------------------------------
 
 Q6. How can we take an input from the user in Python?
@@ -69,6 +76,7 @@ the input can be typecasted as per the type required or the default input is a s
 
 name=input("ENTER YOUR NAME")
 age=int(input("ENTER AGE))
+
 --------------------------------------------------------------------------------------------
 
 Q7. What is the default datatype of the value that has been taken as an input using input() function?
@@ -94,12 +102,14 @@ c=1.1
 d=int(c)
 print(type(c)) #<class 'float'>
 print(type(d)) #<class 'int'>
+
 --------------------------------------------------------------------------------------------
 
 Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?
 sol.
 
 No, input() can only take one input as a it is string data type.
+
 --------------------------------------------------------------------------------------------
 
 Q10. What are keywords?
@@ -109,12 +119,14 @@ Keywords are reserved words in Python that can be used while declaration of vari
 There are 33 keywords
 examples :
 print,and,or,not,in,if .....
+
 --------------------------------------------------------------------------------------------
 
 Q11. Can we use keywords as a variable? Support your answer with reason.
 sol.
 
 NO, keywords can not be used as variables, as they are used ti define syntax and the structure of python programming language.
+
 --------------------------------------------------------------------------------------------
 
 Q12. What is indentation? What's the use of indentaion in Python?
@@ -128,6 +140,7 @@ if age>18:
     print("CAN VOTE")
 else:
     print("CANT VOTE")
+    
 --------------------------------------------------------------------------------------------
 
 Q13. How can we throw some output in Python?
@@ -135,6 +148,7 @@ sol.
 
 print() is the used to print or output
 return also throws output given a function
+
 --------------------------------------------------------------------------------------------
 
 Q14. What are operators in Python?
@@ -149,6 +163,7 @@ Types of operators:
 * Identity operators (is,not)
 * Membership operators (in,not)
 * Bitwise operators (&,|,^,~,<<,>>)
+* 
 --------------------------------------------------------------------------------------------
 
 Q15. What is difference between / and // operators?
@@ -162,6 +177,7 @@ x=5/2
 y=5//2
 print(x) # 2.5
 print(y) # 2
+
 --------------------------------------------------------------------------------------------
 
 Q16. Write a code that gives following as an output.
@@ -173,6 +189,7 @@ sol.
 print("iNeuroniNeuroniNeuroniNeuron")
 # approach 2
 print("iNeuron"*4)
+
 --------------------------------------------------------------------------------------------
 
 Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
@@ -183,6 +200,7 @@ if myNumber%2==0:
     print(f"{myNumber} is even")
 else:
     print(f"{myNumber} is odd")
+    
 --------------------------------------------------------------------------------------------
 
 Q18. What are boolean operator?
@@ -195,6 +213,7 @@ True or True # True
 True or False # True
 True and True # True
 True and False # False
+
 --------------------------------------------------------------------------------------------
 
 Q19. What will the output of the following?
@@ -212,6 +231,7 @@ sol.
 0
 False
 1
+
 --------------------------------------------------------------------------------------------
 
 Q20. What are conditional statements in Python?
@@ -224,18 +244,18 @@ Type:
 * nested if and if-else
 * elif ladder
 
-# IF
+#IF
 if age>18:
     print('VOTER')
 
-# IF-ELSE
+#IF-ELSE
 if age>18:
     print('VOTER')
 else:
     print('NOT VOTER')
 
-# ELIF
-# ELIF LADDER
+#ELIF
+#ELIF LADDER
 if (marks>91 && marks<=100):
     print('A grade')
 elif (marks>81 && marks<=90):
@@ -243,7 +263,7 @@ elif (marks>81 && marks<=90):
 else:
     print('NO GRADE')
 
-# NESTED IF and IF-ELSE
+#NESTED IF and IF-ELSE
 if (num>0):
     print("POSITIVE")
     if(num%2==0):
@@ -265,7 +285,8 @@ Q21. What is use of 'if', 'elif' and 'else' keywords?
 sol.
 
 if,elif,else are used to control the flow of the program,they are decision making statements
-# examples in Q20.
+#examples in Q20.
+
 --------------------------------------------------------------------------------------------
 
 Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
@@ -277,6 +298,7 @@ if myAge>=18:
     print("I can vote")
 else:
     print("I can't vote")
+    
 --------------------------------------------------------------------------------------------
 
 Q23. Write a code that displays the sum of all the even numbers from the given list.
@@ -290,7 +312,8 @@ for i in range(len(numbers)):
     if numbers[i]%2==0:
         sum+=numbers[i]
 print(f"SUM of even numbers from {numbers} is {sum}")
-# SUM of even numbers from [12, 75, 150, 180, 145, 525, 50] is 392
+#SUM of even numbers from [12, 75, 150, 180, 145, 525, 50] is 392
+
 --------------------------------------------------------------------------------------------
 
 Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
@@ -314,6 +337,7 @@ Enter second number: 10
 Enter third number: 7
 The largest number is 10
 '''
+
 --------------------------------------------------------------------------------------------
 
 Q25. Write a program to display only those numbers from a list that satisfy the following conditions
@@ -336,4 +360,5 @@ for i in numbers:
         if i>150:
             continue
         print(i)
+        
 --------------------------------------------------------------------------------------------   
