@@ -878,7 +878,360 @@ isHuman True
 #################################### CODING PROBLEMS #######################################
 ############################################################################################
 
+Q76. Write a Python program to find the factorial of a given number.
+sol.
 
+def factorial(x):
+    return 1 if (x==0 or x==1) else x * factorial(x - 1);
 
+print(factorial(5)) # 120
+-------------------------------------------------------------------------------------------- 
+
+Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100
+sol.
+
+def SI(p,r,t):
+    si=(p*r*t)/100
+    return si
+
+print(SI(100,2,3)) # 6.0
+-------------------------------------------------------------------------------------------- 
+
+Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
+sol.
+
+def CI(p,r,t):
+    ci=p*((1+(r/100))**t)
+    return ci
+
+print(CI(100,2,3)) # 106.12080000000002
+-------------------------------------------------------------------------------------------- 
+
+Q79. Write a Python program to check if a number is prime or not.
+sol.
+
+def PRIME(x):
+    if x > 1:
+        for i in range(2, int(x/2)+1):
+            if (x % i) == 0:
+                print(x, " is NOT PRIME")
+                break
+        else:
+            print(x, "is PRIME")
+    else:
+        print(x, " is NOT PRIME")
+
+print(PRIME(5)) # 5 is PRIME
+-------------------------------------------------------------------------------------------- 
+
+Q80. Write a Python program to check Armstrong Number.
+sol.
+
+def ARMSTRONG(x):
+    no_of_digits=len(str(x))
+    t=x
+    sum=0
+    while t:
+        last_digit=t%10
+        sum=sum+(last_digit)**no_of_digits
+        t=t//10
+    if sum==x:
+        print(x," is ARMSTRONG")
+    else:
+        print(x," is NOT ARMSTRONG")
+        
+print(ARMSTRONG(407)) # 407 is ARMSTRONG
+-------------------------------------------------------------------------------------------- 
+
+Q81. Write a Python program to find the n-th Fibonacci Number.
+sol.
+
+def FIBONACCI(x):
+    if x <= 1:
+        return x
+    return FIBONACCI(x-1) + FIBONACCI(x-2)
+
+print(FIBONACCI(6)) # 8
+-------------------------------------------------------------------------------------------- 
+
+Q82. Write a Python program to interchange the first and last element in a list.
+sol.
+
+def SWAPPER_first_last(x):
+    x[0],x[-1]=x[-1],x[0]
+    return x
+myList = ['hello',2,3,'world']
+
+print(SWAPPER_first_last(myList)) # ['world', 2, 3, 'hello']
+-------------------------------------------------------------------------------------------- 
+
+Q83. Write a Python program to swap two elements in a list.
+sol.
+
+def SWAPPER_a_b(x, a, b):
+    x[a], x[b] = x[b], x[a]
+    return x
+
+myList = ['hello',2,3,'world'] 
+i1, i2  = 0, 3
+print(SWAPPER_a_b(myList, i1, i2))  # ['world', 2, 3, 'hello'] 
+-------------------------------------------------------------------------------------------- 
+
+Q84. Write a Python program to find N largest element from a list.
+sol.
+
+def N_LARGEST_ELEMENTS(x, N):
+    y = []
+    for i in range(0, N):
+        max_no = 0
+        for j in range(len(x)):    
+            if x[j] > max_no:
+                max_no = x[j];            
+        x.remove(max_no);
+        y.append(max_no)
+    returny
+ 
+myList = [99,8,78,65,24,3,61,10,5]
+N = 2
+print(N_LARGEST_ELEMENTS(myList, N)) # [99,78]
+-------------------------------------------------------------------------------------------- 
+
+Q85. Write a Python program to find cumulative sum of a list.
+sol.
+
+def CUM_LIST(x):
+    y=[]
+    curSum=0
+    for i in range(0,len(x)):
+        curSum=curSum+x[i]
+        y.append(curSum)
+    return y
+list=[5,10,15,20]  
+print(CUM_LIST(list)) # [5, 15, 30, 50]
+-------------------------------------------------------------------------------------------- 
+
+Q86. Write a Python program to check if a string is palindrome or not.
+sol.
+
+def PALINDROME(x):
+    if(x==x[::-1]):
+          return x + " is a PALINDROME"
+    else:
+          return x + " is NOT PALINDROME"   
+print(PALINDROME('jajaj')) # jajaj is a PALINDROME
+-------------------------------------------------------------------------------------------- 
+
+Q87. Write a Python program to remove i'th element from a string.
+sol.
+
+def REMOVE_i(x, n):
+	a = x[ : n]
+	b = x[n + 1: ]
+	return a + b
+print(REMOVE_i('JAMES',2)) # JAES
+-------------------------------------------------------------------------------------------- 
+
+Q88. Write a Python program to check if a substring is present in a given string.
+sol.
+
+def CHECK_SUBSTR(str, subStr): 
+   if (str.find(subStr) == -1): 
+      print(f'{subStr} not present in {str}') 
+   else: 
+      print(f'{subStr}  present in {str}') 
+CHECK_SUBSTR('JAMES','AM') # AM present in JAMES
+--------------------------------------------------------------------------------------------
+
+Q89. Write a Python program to find words which are greater than given length k.
+sol.
+
+def LARGER_WORDS_k(k, str):
+    word_list=[]    
+    word = str.split(" ")
+    for i in word:
+        if len(i)>k:
+            word_list.append(i)
+    return word_list
+        
+k = 6
+str ="Largest sentences always make no sense"
+print(LARGER_WORDS_k(k, str)) # ['Largest', 'sentences']
+
+--------------------------------------------------------------------------------------------
+
+Q90. Write a Python program to extract unquire dictionary values.
+sol.
+
+def unique(a):
+    unique_vals=[]
+    for i in a.values():
+        if i not in unique_vals:
+            unique_vals.append(i)
+    return unique_vals
+    
+a={'john':12,'james':15,'jonathan':12,'joey':18}
+print(unique(a)) # [12,15,18]
+--------------------------------------------------------------------------------------------
+
+Q91. Write a Python program to merge two dictionary.
+sol.
+
+def merger(a,b):
+    c=a.copy()
+    c.update(b)
+    return c
+
+a={'john':12,'james':15,'jonathan':12,'joey':18}
+b={'adam':78,'alan':87}
+print(merger(a,b)) # {'john':12,'james':15,'jonathan':12,'joey':18,'adam':78,'alan':87}
+--------------------------------------------------------------------------------------------
+
+Q92. Write a Python program to convert a list of tuples into dictionary.
+```
+Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
+```
+sol.
+
+def LIST_2_DICT(x):
+    return dict(x)
+my_list=[('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+print(LIST_2_DICT(my_list)) 
+--------------------------------------------------------------------------------------------
+
+Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
+```
+Input: list = [9, 5, 6]
+Output: [(9, 729), (5, 125), (6, 216)]
+```
+sol.
+
+def LIST_CUBES(x):
+    cubes = [] 
+    for i in x:
+        x = (i, (i**3))
+        cubes.append(x)
+    return cubes
+a=[9, 5, 6]
+print(LIST_CUBES(a))
+--------------------------------------------------------------------------------------------
+
+Q94. Write a Python program to get all combinations of 2 tuples.
+```
+Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
+Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
+```
+sol.
+
+def COMBINATION(t1,t2):
+    combined=[]
+    for i in t1:
+        for j in t2:
+            combined.append((i, j))
+    for i in t2:
+        for j in t1:
+            combined.append((i, j))
+    return combined
+    
+test_tuple1 = (7, 2)
+test_tuple2 = (7, 8)
+print(COMBINATION(test_tuple1,test_tuple2))
+--------------------------------------------------------------------------------------------
+
+Q95. Write a Python program to sort a list of tuples by second item.
+```
+Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
+```
+sol.
+
+def sortBy2ndItem(x):
+    for i in range(len(x)):
+        for j in range(len(x)-i-1):
+            if(x[j][1]>x[j+1][1]):
+                x[j],x[j+1]=x[j+1],x[j]
+    return x
+    
+x=[('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+print(sortBy2ndItem(x))
+--------------------------------------------------------------------------------------------
+
+Q96. Write a python program to print below pattern.
+```
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+```
+sol.
+
+n = 5
+for i in range(0, n):
+    for j in range(0, i + 1):
+        print("*", end=' ')
+    print("")
+--------------------------------------------------------------------------------------------
+
+Q97. Write a python program to print below pattern.
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+sol.
+
+--------------------------------------------------------------------------------------------
+
+Q98. Write a python program to print below pattern.
+```
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+```
+sol.
+
+--------------------------------------------------------------------------------------------
+
+Q99. Write a python program to print below pattern.
+```
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+```
+sol.
+
+n = 5
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end=' ')
+    print('')
+--------------------------------------------------------------------------------------------
+
+Q100. Write a python program to print below pattern.
+```
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+```
+sol.
+
+ascii_for_A = 65
+n = 5
+for i in range(0, n):
+    for j in range(0, i + 1):
+        character = chr(ascii_for_A)
+        print(character, end=' ')
+    ascii_for_A += 1
+    print(" ")
+--------------------------------------------------------------------------------------------
 
 
